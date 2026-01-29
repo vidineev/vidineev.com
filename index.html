@@ -59,38 +59,29 @@
       font-size: 15px;
     }
 
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 4px;
-}
-
-.social a {
-  display: inline-flex;
-  width: 20px;
-  height: 20px;
-  color: #b5b5b5;
-  transition: color .2s ease;
-}
-
-.social a:hover {
-  color: #111;
-}
-
-.social svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 4px;
+    }
 
     .social a {
-      font-size: 14px;
-      opacity: .65;
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      color: #b5b5b5;
+      transition: color .2s ease;
     }
 
     .social a:hover {
-      opacity: 1;
+      color: #111;
+    }
+
+    .social svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
     }
 
     /* CONTENT */
@@ -143,60 +134,67 @@
 
       <!-- SIDEBAR -->
       <aside class="sidebar">
-  <img src="avatar.jpg" alt="Никита Видинеев" class="avatar">
-  <div class="name">Никита Видинеев</div>
+        <img src="avatar.jpg" alt="Никита Видинеев" class="avatar">
+        <div class="name">Никита Видинеев</div>
 
-  <div class="social">
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/NikitaVidineev" target="_blank" aria-label="Facebook">
-      <svg viewBox="0 0 24 24">
-        <path d="M15 3h4V0h-4c-3.3 0-6 2.7-6 6v3H6v4h3v11h4V13h4l1-4h-5V6c0-.6.4-1 1-1z"/>
-      </svg>
-    </a>
+        <div class="social">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/NikitaVidineev" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 3h4V0h-4c-3.3 0-6 2.7-6 6v3H6v4h3v11h4V13h4l1-4h-5V6c0-.6.4-1 1-1z"/>
+            </svg>
+          </a>
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/vidineev.ru" target="_blank" aria-label="Instagram">
-      <svg viewBox="0 0 24 24">
-        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm5-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-      </svg>
-    </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/vidineev.ru" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm5-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+            </svg>
+          </a>
 
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/vidineev/" target="_blank" aria-label="LinkedIn">
-      <svg viewBox="0 0 24 24">
-        <path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM2 8h4v14H2V8zm7 0h4v2h.1c.6-1.1 2-2.2 4-2.2 4.3 0 5 2.8 5 6.5V22h-4v-6.5c0-1.6 0-3.7-2.3-3.7-2.3 0-2.7 1.8-2.7 3.6V22H9V8z"/>
-      </svg>
-    </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/vidineev/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM2 8h4v14H2V8zm7 0h4v2h.1c.6-1.1 2-2.2 4-2.2 4.3 0 5 2.8 5 6.5V22h-4v-6.5c0-1.6 0-3.7-2.3-3.7-2.3 0-2.7 1.8-2.7 3.6V22H9V8z"/>
+            </svg>
+          </a>
 
-    <!-- Twitter -->
-    <a href="https://twitter.com/NikitaVidineev" target="_blank" aria-label="Twitter">
-      <svg viewBox="0 0 24 24">
-        <path d="M23 3a10.9 10.9 0 0 1-3.1.9A5.4 5.4 0 0 0 22.3 1a10.8 10.8 0 0 1-3.4 1.3A5.4 5.4 0 0 0 9.5 7.1 15.3 15.3 0 0 1 1.6 1.7a5.4 5.4 0 0 0 1.7 7.2A5.2 5.2 0 0 1 1 8.2v.1a5.4 5.4 0 0 0 4.3 5.3 5.4 5.4 0 0 1-2.4.1 5.4 5.4 0 0 0 5 3.7A10.9 10.9 0 0 1 1 19.5 15.4 15.4 0 0 0 8.3 22c7.6 0 11.7-6.3 11.7-11.7v-.5A8.2 8.2 0 0 0 23 3z"/>
-      </svg>
-    </a>
+          <!-- Twitter -->
+          <a href="https://twitter.com/NikitaVidineev" target="_blank" aria-label="Twitter">
+            <svg viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 0 1-3.1.9A5.4 5.4 0 0 0 22.3 1a10.8 10.8 0 0 1-3.4 1.3A5.4 5.4 0 0 0 9.5 7.1 15.3 15.3 0 0 1 1.6 1.7a5.4 5.4 0 0 0 1.7 7.2A5.2 5.2 0 0 1 1 8.2v.1a5.4 5.4 0 0 0 4.3 5.3 5.4 5.4 0 0 1-2.4.1 5.4 5.4 0 0 0 5 3.7A10.9 10.9 0 0 1 1 19.5 15.4 15.4 0 0 0 8.3 22c7.6 0 11.7-6.3 11.7-11.7v-.5A8.2 8.2 0 0 0 23 3z"/>
+            </svg>
+          </a>
 
-    <!-- GitHub -->
-    <a href="https://github.com/vidineev" target="_blank" aria-label="GitHub">
-      <svg viewBox="0 0 24 24">
-        <path d="M12 .5A12 12 0 0 0 8.2 24c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.4 3.6 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.4-5.5-6.2 0-1.4.5-2.5 1.3-3.4-.1-.3-.6-1.6.1-3.3 0 0 1.1-.3 3.5 1.3a12 12 0 0 1 6.4 0c2.4-1.6 3.5-1.3 3.5-1.3.7 1.7.2 3 .1 3.3.8.9 1.3 2 1.3 3.4 0 4.8-2.8 5.9-5.5 6.2.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/>
-      </svg>
-    </a>
+          <!-- GitHub -->
+          <a href="https://github.com/vidineev" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 .5A12 12 0 0 0 8.2 24c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.4 3.6 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.4-5.5-6.2 0-1.4.5-2.5 1.3-3.4-.1-.3-.6-1.6.1-3.3 0 0 1.1-.3 3.5 1.3a12 12 0 0 1 6.4 0c2.4-1.6 3.5-1.3 3.5-1.3.7 1.7.2 3 .1 3.3.8.9 1.3 2 1.3 3.4 0 4.8-2.8 5.9-5.5 6.2.4.4.8 1.1.8 2.3v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/>
+            </svg>
+          </a>
 
-    <!-- Email -->
-    <a href="mailto:nikita@vidineev.email" aria-label="Email">
-      <svg viewBox="0 0 24 24">
-        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-      </svg>
-    </a>
-  </div>
-</aside>
-
+          <!-- Email -->
+          <a href="mailto:nikita@vidineev.email" aria-label="Email">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+        </div>
+      </aside>
 
       <!-- CONTENT -->
       <main>
         <h1>Обо мне</h1>
 
-        <p>Меня зовут Никита Видинеев. Я курирую разработку digital продуктов.</p>
+        <p>Управляю разработкой и поставкой цифровых продуктов. Опыт в финтехе, blockchain-технологиях и digital. Развиваю экспертизу в техническом лидерстве.</p>
+
+        <h2>Сейчас</h2>
+
+        <ul>
+          <li>Delivery Manager в международном финтехе</li>
+          <li>Изучаю technical leadership и архитектуру систем</li>
+          <li>Увлекаюсь инфраструктурными решениями</li>
+        </ul>
 
         <h2>Экскурс в историю</h2>
 
@@ -208,26 +206,24 @@
           в 2008 году.
         </p>
 
-        <p>2008–2009 — SEO. Прогоны по каталогам.</p>
-        <p>2009–2010 — Webmaster. Создание сайтов на заказ. Sape. <del>Дорвеи.</del></p>
-        <p>2010–2012 — Сателлиты. Сетки сайтов.</p>
-        <p>2012–2016 — Сайты для людей. Вечные ссылки. Контекстная реклама.</p>
+        <p>2008–2012 — SEO, веб-разработка, управление проектами</p>
+        <p>2012–2016 — Контекстная реклама, работа с клиентами</p>
         <p>
-          2016–2018 — Project manager в digital агентстве полного цикла —
-          <a href="http://ailove.ru" target="_blank">Ailove</a>.
+          2016–2018 — Project Manager в digital-агентстве
+          <a href="http://ailove.ru" target="_blank">Ailove</a>
         </p>
-        <p>2018–∞ — Blockchain</p>
+        <p>2018–∞ — Финтех и blockchain</p>
 
         <h2>О чем этот блог</h2>
 
-        <p>Здесь вы (<strong>когда-нибудь</strong>) найдете мои заметки на темы:</p>
+        <p>Здесь вы найдете мои заметки на темы:</p>
 
         <ul>
-          <li>Управление проектами;</li>
-          <li>Управление продуктом;</li>
-          <li>Блокчейн и криптовалюты;</li>
-          <li>Предпринимательство;</li>
-          <li>Саморазвитие.</li>
+          <li>Управление продуктами и проектами</li>
+          <li>Техническое лидерство</li>
+          <li>Blockchain и криптовалюты</li>
+          <li>Инфраструктура и DevOps</li>
+          <li>Личная эффективность</li>
         </ul>
       </main>
     </div>
