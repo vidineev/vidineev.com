@@ -65,11 +65,17 @@
       gap: 56px;
     }
 
-    /* THEME TOGGLE */
-    .theme-toggle {
+    /* CONTROLS */
+    .controls {
       position: fixed;
       top: 24px;
       right: 24px;
+      display: flex;
+      gap: 12px;
+      z-index: 1000;
+    }
+
+    .theme-toggle, .lang-toggle {
       background: var(--bg-secondary);
       border: 1px solid var(--border-color);
       border-radius: 50%;
@@ -80,10 +86,9 @@
       justify-content: center;
       cursor: pointer;
       transition: all 0.3s ease;
-      z-index: 1000;
     }
 
-    .theme-toggle:hover {
+    .theme-toggle:hover, .lang-toggle:hover {
       transform: scale(1.1);
     }
 
@@ -104,6 +109,12 @@
 
     [data-theme="dark"] .theme-toggle .moon-icon {
       display: none;
+    }
+
+    .lang-toggle {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
     }
 
     /* SIDEBAR */
@@ -182,6 +193,15 @@
       font-size: 14px;
     }
 
+    /* LANGUAGE CONTENT */
+    [lang="en"] .lang-ru {
+      display: none;
+    }
+
+    [lang="ru"] .lang-en {
+      display: none;
+    }
+
     @media (max-width: 820px) {
       .layout {
         grid-template-columns: 1fr;
@@ -192,7 +212,7 @@
         font-size: 44px;
       }
 
-      .theme-toggle {
+      .controls {
         top: 16px;
         right: 16px;
       }
@@ -201,23 +221,29 @@
 </head>
 
 <body>
-  <!-- THEME TOGGLE BUTTON -->
-  <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
-    <svg class="moon-icon" viewBox="0 0 24 24">
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
-    <svg class="sun-icon" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="5"/>
-      <line x1="12" y1="1" x2="12" y2="3"/>
-      <line x1="12" y1="21" x2="12" y2="23"/>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-      <line x1="1" y1="12" x2="3" y2="12"/>
-      <line x1="21" y1="12" x2="23" y2="12"/>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-    </svg>
-  </button>
+  <!-- CONTROLS -->
+  <div class="controls">
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+      <span class="lang-ru">EN</span>
+      <span class="lang-en">RU</span>
+    </button>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="moon-icon" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <svg class="sun-icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+  </div>
 
   <div class="wrap">
     <div class="layout">
@@ -274,21 +300,37 @@
 
       <!-- CONTENT -->
       <main>
-        <h1>Обо мне</h1>
+        <h1>
+          <span class="lang-ru">Обо мне</span>
+          <span class="lang-en">About me</span>
+        </h1>
 
-        <p>Управляю разработкой и поставкой цифровых продуктов. Опыт в финтехе, blockchain-технологиях и digital. Развиваю экспертизу в техническом лидерстве.</p>
+        <p class="lang-ru">Управляю разработкой и поставкой цифровых продуктов. Опыт в финтехе, blockchain-технологиях и digital. Развиваю экспертизу в техническом лидерстве.</p>
+        <p class="lang-en">I manage digital product development and delivery. Experience in fintech, blockchain technologies, and digital. Developing expertise in technical leadership.</p>
 
-        <h2>Сейчас</h2>
+        <h2>
+          <span class="lang-ru">Сейчас</span>
+          <span class="lang-en">Now</span>
+        </h2>
 
-        <ul>
+        <ul class="lang-ru">
           <li>Delivery Manager в международном финтехе</li>
           <li>Изучаю technical leadership и архитектуру систем</li>
           <li>Увлекаюсь инфраструктурными решениями</li>
         </ul>
 
-        <h2>Экскурс в историю</h2>
+        <ul class="lang-en">
+          <li>Delivery Manager in international fintech</li>
+          <li>Studying technical leadership and system architecture</li>
+          <li>Passionate about infrastructure solutions</li>
+        </ul>
 
-        <p>
+        <h2>
+          <span class="lang-ru">Экскурс в историю</span>
+          <span class="lang-en">Brief history</span>
+        </h2>
+
+        <p class="lang-ru">
           Начал свою digital историю с форумов
           <a href="https://searchengines.guru/member.php?u=91599" target="_blank">searchengines</a>
           и
@@ -296,24 +338,56 @@
           в 2008 году.
         </p>
 
-        <p>2008–2012 — SEO, веб-разработка, управление проектами</p>
-        <p>2012–2016 — Контекстная реклама, работа с клиентами</p>
-        <p>
-          2016–2018 — Project Manager в digital-агентстве
-          <a href="http://ailove.ru" target="_blank">Ailove</a>
+        <p class="lang-en">
+          Started my digital journey on forums
+          <a href="https://searchengines.guru/member.php?u=91599" target="_blank">searchengines</a>
+          and
+          <a href="https://www.maultalk.com/user8796.html" target="_blank">maultalk</a>
+          in 2008.
         </p>
-        <p>2018–∞ — Финтех и blockchain</p>
 
-        <h2>О чем этот блог</h2>
+        <div class="lang-ru">
+          <p>2008–2012 — SEO, веб-разработка, управление проектами</p>
+          <p>2012–2016 — Контекстная реклама, работа с клиентами</p>
+          <p>
+            2016–2018 — Project Manager в digital-агентстве
+            <a href="http://ailove.ru" target="_blank">Ailove</a>
+          </p>
+          <p>2018–∞ — Финтех и blockchain</p>
+        </div>
 
-        <p>Здесь вы найдете мои заметки на темы:</p>
+        <div class="lang-en">
+          <p>2008–2012 — SEO, web development, project management</p>
+          <p>2012–2016 — Contextual advertising, client relations</p>
+          <p>
+            2016–2018 — Project Manager at digital agency
+            <a href="http://ailove.ru" target="_blank">Ailove</a>
+          </p>
+          <p>2018–∞ — Fintech and blockchain</p>
+        </div>
 
-        <ul>
+        <h2>
+          <span class="lang-ru">О чем этот блог</span>
+          <span class="lang-en">What this blog is about</span>
+        </h2>
+
+        <p class="lang-ru">Здесь вы найдете мои заметки на темы:</p>
+        <p class="lang-en">Here you'll find my notes on:</p>
+
+        <ul class="lang-ru">
           <li>Управление продуктами и проектами</li>
           <li>Техническое лидерство</li>
           <li>Blockchain и криптовалюты</li>
           <li>Инфраструктура и DevOps</li>
           <li>Личная эффективность</li>
+        </ul>
+
+        <ul class="lang-en">
+          <li>Product and project management</li>
+          <li>Technical leadership</li>
+          <li>Blockchain and cryptocurrencies</li>
+          <li>Infrastructure and DevOps</li>
+          <li>Personal effectiveness</li>
         </ul>
       </main>
     </div>
@@ -326,11 +400,16 @@
   <script>
     // Theme toggle functionality
     const themeToggle = document.getElementById('themeToggle');
+    const langToggle = document.getElementById('langToggle');
     const html = document.documentElement;
 
     // Check for saved theme preference or default to light mode
     const currentTheme = localStorage.getItem('theme') || 'light';
     html.setAttribute('data-theme', currentTheme);
+
+    // Check for saved language preference or default to Russian
+    const currentLang = localStorage.getItem('lang') || 'ru';
+    html.setAttribute('lang', currentLang);
 
     themeToggle.addEventListener('click', () => {
       const theme = html.getAttribute('data-theme');
@@ -340,12 +419,29 @@
       localStorage.setItem('theme', newTheme);
     });
 
+    langToggle.addEventListener('click', () => {
+      const lang = html.getAttribute('lang');
+      const newLang = lang === 'ru' ? 'en' : 'ru';
+      
+      html.setAttribute('lang', newLang);
+      localStorage.setItem('lang', newLang);
+    });
+
     // Optional: Detect system preference on first visit
     if (!localStorage.getItem('theme')) {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       if (prefersDark) {
         html.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // Optional: Detect browser language on first visit
+    if (!localStorage.getItem('lang')) {
+      const browserLang = navigator.language || navigator.userLanguage;
+      if (browserLang.startsWith('en')) {
+        html.setAttribute('lang', 'en');
+        localStorage.setItem('lang', 'en');
       }
     }
   </script>
